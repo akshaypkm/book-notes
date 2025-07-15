@@ -1,7 +1,19 @@
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: #1f2937; /* Tailwind gray-800 */
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+.placeholder-img {
+  width: 200px;
+  height: 300px;
+  background-color: #4b5563; /* Tailwind gray-600 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af; /* Tailwind gray-400 */
+  font-size: 1.5rem;
 }
