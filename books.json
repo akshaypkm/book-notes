@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Sample Book",
+    "author": "Author Name",
+    "points": [
+      "Key point 1 from the book.",
+      "Key point 2 from the book.",
+      "Key point 3 from the book."
+    ]
+  }
+]
