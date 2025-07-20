@@ -27,19 +27,26 @@ async function loadBooks() {
       card.className = 'card rounded-lg shadow';
 
       card.innerHTML = `
-        <div class="card-header flex items-center gap-4 p-4 cursor-pointer">
-          <img src="${book.image || 'images/fallback.jpg'}" class="book-img" alt="${book.title} cover">
-          <div>
-            <h2 class="text-xl font-semibold text-white">${book.title}</h2>
-            <p class="text-gray-400 italic">by ${book.author}</p>
-          </div>
-        </div>
-        <div class="card-details hidden p-4">
-          <ul class="list-none text-gray-300">
-            ${book.points.map(point => `<li class="mb-2">• ${point}</li>`).join('')}
-          </ul>
-        </div>
-      `;
+  <div class="card-header flex items-center gap-4 p-4 cursor-pointer">
+    <img src="${book.image || 'images/fallback.jpg'}" class="book-img" alt="${book.title} cover">
+    <div>
+      <h2 class="text-xl font-semibold">
+        <a href="${book.link}" target="_blank" class="text-white hover:text-blue-400 underline book-link">${book.title}</a>
+      </h2>
+      <p class="text-gray-400 italic">by ${book.author}</p>
+    </div>
+  </div>
+  <div class="card-details hidden p-4">
+    <ul class="list-none text-justify space-y-6 leading-relaxed text-base">
+  ${book.points.map((point, index) => {
+    const colorClass = index % 2 === 0 ? 'text-gray-300' : 'text-gray-400';
+    return `<li class="${colorClass}">• ${point}</li>`;
+  }).join('')}
+</ul>
+  </div>
+
+`;
+
 
       console.log('Card created for:', book.title);
 
