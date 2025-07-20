@@ -1,10 +1,16 @@
 .font-poppins {
   font-family: 'Poppins', sans-serif;
 }
+
+.card-details li {
+  text-align: justify;
+}
+
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #1f2937; /* Tailwind gray-800 */
 }
+
 .card-header {
   display: flex;
   align-items: center;
